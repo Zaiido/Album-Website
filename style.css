@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Oswald";
+}
+
+header {
+    background-color: #191919;
+}
+
+svg {
+    vertical-align: unset;
+}
+
+nav {
+    min-height: 10vh;
+}
+
+nav>svg {
+    width: 50px;
+    height: 40px;
+    transform: rotateZ(13deg);
+    cursor: pointer;
+}
+
+nav a.nav-link:hover {
+    color: #28A745 !important;
+}
+
+.hero {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.35647762522977944) 0%, rgba(0, 0, 0, 1) 100%), url("https://images.unsplash.com/photo-1471614654469-512ee6a4397a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    min-height: 90vh;
+    background-size: cover;
+}
+
+h1 svg,
+span svg {
+    width: 30px;
+    height: 30px;
+}
+
+.rate {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.35647762522977944) 0%, rgba(0, 0, 0, 1) 100%), url("https://static.dw.com/image/63920593_303.jpg");
+    background-size: cover;
+    min-height: 80vh;
+    position: relative;
+}
+
+.rate .container {
+    background-color: #19191996;
+    max-width: fit-content;
+    position: absolute;
+    left: 5%;
+}
+
+.rate h1 {
+    font-size: 110px;
+}
+
+.rate h2 {
+    font-size: 80px;
+}
+
+.stars svg {
+    width: 20px;
+    height: 20px;
+    color: rgb(194, 194, 21);
+}
+
+.albums-container {
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+.position {
+    flex-grow: 1;
+}
+
+.album-data {
+    flex-grow: 2;
+}
+
+
+section.favourite-artist {
+    background-color: #f8f7ff;
+}
+
+.tapestry .img-container {
+    max-width: 95%;
+    margin-inline: auto;
+}
+
+.tapestry img {
+    width: 250px;
+    height: 250px;
+    margin-right: -4px;
+}
+
+footer {
+    background-color: #f8f7ff;
+}
+
+.icons {
+    min-width: 100px;
+}
+
+.icons svg {
+    cursor: pointer;
+}

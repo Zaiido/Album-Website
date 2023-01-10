@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <div class="card" >
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" class="card-img-top"
+            alt="Album Cover">
+        <div class="card-body">
+            <h5 class="card-title">Thriller</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+            <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+            <div class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock"
+                    viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                </svg>
+                <p class="card-text ml-1">
+                    <small class="text-muted">42:16</small>
+                </p>
+            </div>
+        </div> 
+
+    </div> -->
+
+    <header class="mb-5">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-music-note-beamed text-success" viewBox="0 0 16 16">
+                    <path
+                        d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                    <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                    <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                </svg>
+                <a class="navbar-brand text-light" href="#">
+                    XODO</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-list text-light" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#albums">Favourite Albums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#top-album">Top Album</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#hall-of-shame">Worst Albums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#top-artist">Top Artist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg></button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <div id="#home" class="d-flex flex-column justify-content-center align-items-center hero">
+            <h1 class="text-light mb-4">Made with Love
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-music-note" viewBox="0 0 16 16">
+                    <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                    <path fill-rule="evenodd" d="M9 3v10H8V3h1z" />
+                    <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-music-note" viewBox="0 0 16 16">
+                    <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                    <path fill-rule="evenodd" d="M9 3v10H8V3h1z" />
+                    <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-music-note" viewBox="0 0 16 16">
+                    <path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                    <path fill-rule="evenodd" d="M9 3v10H8V3h1z" />
+                    <path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z" />
+                </svg>
+            </h1>
+            <button class="btn btn-lg btn-success pl-4 pr-4"><a class="text-light text-decoration-none" href="#albums">
+                    Navigate</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div id="albums" class="container pt-3">
+        <h2 class="text-center m-5">My Favourite Albums</h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                        class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Thriller</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Michael Jackson</h6>
+                        <p class="card-text"><small>Pop, post-disco, funk, rock</small></p>
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <p class="card-text ml-1">
+                                <small class="text-muted">42:16</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="#top-album" class="rate mt-5 text-light d-flex flex-column justify-content-center">
+        <div class="container p-5">
+            <div class="d-flex align-items-center justify-content-between">
+                <h4>BEST ALBUM </h4>
+                <div class="stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                </div>
+            </div>
+
+            <h1>Thriller</h1>
+            <h2>Michael Jackson</h2>
+            <h3>Pop, post-disco, funk, rock</h3>
+            <div class="d-flex align-items-center pt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock"
+                    viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                </svg>
+                <p class="card-text ml-1">42:16
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="#hall-of-shame" class="worst-albums mt-5">
+        <h2 class="text-center">HALL OF SHAME</h2>
+        <div class="container p-5">
+            <div class="albums-container">
+                <div class="album d-flex">
+                    <div class="position p-2">
+                        <p>1.</p>
+                    </div>
+                    <div class="album-data d-flex justify-content-between">
+                        <div class="title p-2">
+                            <p>Thriller</p>
+                        </div>
+                        <div class="artist p-2">
+                            <p>Michael Jackson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="album d-flex">
+                    <div class="position p-2">
+                        <p>2.</p>
+                    </div>
+                    <div class="album-data d-flex justify-content-between">
+                        <div class="title p-2">
+                            <p>Thriller</p>
+                        </div>
+                        <div class="artist p-2">
+                            <p>Michael Jackson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="album d-flex">
+                    <div class="position p-2">
+                        <p>3.</p>
+                    </div>
+                    <div class="album-data d-flex justify-content-between">
+                        <div class="title p-2">
+                            <p>Thriller</p>
+                        </div>
+                        <div class="artist p-2">
+                            <p>Michael Jackson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="album d-flex">
+                    <div class="position p-2">
+                        <p>4.</p>
+                    </div>
+                    <div class="album-data d-flex justify-content-between">
+                        <div class="title p-2">
+                            <p>Thriller</p>
+                        </div>
+                        <div class="artist p-2">
+                            <p>Michael Jackson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="album d-flex">
+                    <div class="position p-2">
+                        <p>5.</p>
+                    </div>
+                    <div class="album-data d-flex justify-content-between">
+                        <div class="title p-2">
+                            <p>Thriller</p>
+                        </div>
+                        <div class="artist p-2">
+                            <p>Michael Jackson</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="#top-artist" class="favourite-artist p-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="round col-12 col-lg-6">
+                    <img class="img-fluid"
+                        src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkyMjkwNTI2MDAxNjM2NTg4/michael-jackson-gettyimages-89446104.jpg"
+                        alt="Michael Jackson">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2>Michael Jackson</h2>
+                    <p>Michael Joseph Jackson (August 29, 1958 - June 25, 2009) was an American singer, songwriter,
+                        dancer, and philanthropist. Dubbed the "King of Pop", he is regarded as one of the most
+                        significant cultural figures of the 20th century. Over a four-decade career, his contributions
+                        to music, dance, and fashion, along with his publicized personal life, made him a global figure
+                        in popular culture. Jackson influenced artists across many music genres; through stage and video
+                        performances, he popularized complicated dance moves such as the moonwalk, to which he gave the
+                        name, as well as the robot. He is the most awarded musician in history.</p>
+                    <p>Jackson is one of the best-selling music artists in history, with sales estimated by various
+                        sources up to 400 million - 1 billion. He had 13 number-one singles in the US in
+                        his solo career—more than any other male artist in the Hot 100 era. The RIAA regards him as
+                        the biggest-selling music artist of all time worldwide. He was invited and honored by a
+                        President of the United States at the White House three times. In 1984, he was honored with a
+                        "Presidential Public Safety Commendation" award by Ronald Reagan for his humanitarian
+                        endeavors. In 1990, he was honored as the "Artist of the Decade" by George H. W. Bush.
+                        In 1992, he was honored as a "Point of Light Ambassador" by Bush for inviting disadvantaged
+                        children to his Neverland Ranch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="#gallery" class="tapestry mt-5">
+        <h2 class="text-center pt-5">Album Gallery</h2>
+        <div class="container pt-5">
+            <div class="img-container">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"
+                    alt="Album Cover">
+            </div>
+        </div>
+    </section>
+    <footer id="#contact" class="mt-5 ">
+        <div class="container d-flex p-4 justify-content-between align-items-center">
+            <p>© Copyright 2022</p>
+            <div class="icons d-flex justify-content-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path
+                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
