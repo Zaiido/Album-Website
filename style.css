@@ -23,9 +23,9 @@ nav {
     min-height: 10vh;
 }
 
-nav>svg {
-    width: 50px;
-    height: 40px;
+nav>div>svg {
+    width: 30px;
+    height: 20px;
     transform: rotateZ(13deg);
     cursor: pointer;
 }
@@ -46,71 +46,58 @@ span svg {
     height: 30px;
 }
 
-.rate {
+#top-album {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.35647762522977944) 0%, rgba(0, 0, 0, 1) 100%), url("https://static.dw.com/image/63920593_303.jpg");
     background-size: cover;
     min-height: 80vh;
-    position: relative;
 }
 
-.rate .container {
+#top-album>div>div>div {
     background-color: #19191996;
-    max-width: fit-content;
-    position: absolute;
-    left: 5%;
 }
 
-.rate h1 {
+#top-album h1 {
     font-size: 110px;
 }
 
-.rate h2 {
-    font-size: 80px;
+#top-album h2 {
+    font-size: 70px;
 }
 
 .stars svg {
-    width: 20px;
-    height: 20px;
-    color: rgb(194, 194, 21);
+    width: 30px;
+    height: 30px;
+    color: #FFC107;
 }
-
-.albums-container {
-    max-width: 80%;
-    margin-inline: auto;
-}
-
-.position {
-    flex-grow: 1;
-}
-
-.album-data {
-    flex-grow: 2;
-}
-
 
 section.favourite-artist {
     background-color: #f8f7ff;
-}
-
-.tapestry .img-container {
-    max-width: 95%;
-    margin-inline: auto;
-}
-
-.tapestry img {
-    width: 250px;
-    height: 250px;
-    margin-right: -4px;
 }
 
 footer {
     background-color: #f8f7ff;
 }
 
-.icons {
-    min-width: 100px;
+.album {
+    position: relative;
 }
 
-.icons svg {
-    cursor: pointer;
+.overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.36207986612613796) 0%, rgba(0, 0, 0, 0.6646008745294993) 65%, rgba(0, 0, 0, 1) 100%);
+    position: absolute;
+    top: 70%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card-info {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    left: 0;
+}
+
+.album-info {
+    font-size: 1.5rem;
 }
