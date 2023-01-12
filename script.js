@@ -26,6 +26,7 @@ const addTrack = function () {
   <td><button onclick="deleteTrack()" class="btn btn-danger">Delete</button></td>`;
 
   document.querySelector("#tracklist tbody").appendChild(newTrack);
+  alert(`Track added: ${document.querySelector("#title").value}`);
 };
 
 document
