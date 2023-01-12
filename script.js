@@ -18,15 +18,33 @@ const deleteTrack = function () {
 
 const addTrack = function () {
   let newTrack = document.createElement("tr");
-  newTrack.innerHTML = `
-  <th scope="row">${document.querySelector("#number").value}</th>
-  <td>${document.querySelector("#title").value}</td>
-  <td>${document.querySelector("#artist").value}</td>
-  <td>${document.querySelector("#duration").value}</td>
+  let trackNumber = document.querySelector("#number").value;
+  let trackTitle = document.querySelector("#title").value;
+  let trackArtist = document.querySelector("#artist").value;
+  let trackDuration = document.querySelector("#duration").value;
+  if (
+    trackNumber !== "" &&
+    trackTitle !== "" &&
+    trackArtist !== "" &&
+    trackDuration !== ""
+  ) {
+    newTrack.innerHTML = `
+  <th scope="row">${trackNumber}</th>
+  <td>${trackTitle}</td>
+  <td>${trackArtist}</td>
+  <td>${trackDuration}</td>
   <td><button onclick="deleteTrack()" class="btn btn-danger">Delete</button></td>`;
 
-  document.querySelector("#tracklist tbody").appendChild(newTrack);
-  alert(`Track added: ${document.querySelector("#title").value}`);
+    document.querySelector("#tracklist tbody").appendChild(newTrack);
+    document
+      .querySelector(".modal-footer button:last-child")
+      .setAttribute("data-dismiss", "modal");
+    setTimeout(function () {
+      alert(`Track added: ${document.querySelector("#title").value}`);
+    }, 700);
+  } else {
+    alert("The fields should not be empty.");
+  }
 };
 
 document
