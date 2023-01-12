@@ -34,10 +34,37 @@ nav a.nav-link:hover {
     color: #28A745 !important;
 }
 
-.hero {
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.jumbotron {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.35647762522977944) 0%, rgba(0, 0, 0, 1) 100%), url("https://images.unsplash.com/photo-1471614654469-512ee6a4397a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
     min-height: 90vh;
     background-size: cover;
+    animation: fadein 1s;
+}
+
+.jumbotron h1 {
+    font-size: 4.5rem;
 }
 
 h1 svg,
@@ -100,4 +127,57 @@ footer {
 
 .album-info {
     font-size: 1.5rem;
+}
+
+.truncate {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+#albums .card {
+    position: relative;
+}
+
+#albums .card .genre-badge {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 80px;
+    background-color: #28a746da;
+    color: #191919;
+    border-radius: 10px;
+}
+
+#albums .card .genre-badge p {
+    margin: 0;
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.tracklist-btn {
+    transition: all 0.5s;
+}
+
+.tracklist-btn:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 20px 31px -4px rgba(0, 0, 0, 0.66);
+    box-shadow: 0px 10px 13px -7px #000000, 0px 20px 31px -4px rgba(0, 0, 0, 0.66);
+    transform: translateZ(-5px);
+}
+
+
+#tracklist tbody button {
+    opacity: 0;
+    transition: opacity 0.55s ease-in-out;
+}
+
+#tracklist tbody tr:hover button {
+    opacity: 1.0;
+    transition: opacity 0.55s ease-in-out;
 }
